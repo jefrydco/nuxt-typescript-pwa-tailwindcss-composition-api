@@ -19,6 +19,8 @@ module.exports = {
     content(contentDefaults) {
       return contentDefaults.map((file) => file.replace('.js', '.ts'))
     },
-    whitelist: ['dark-mode']
+    options: {
+      whitelist: ['dark-mode']
+    }
   }
 }
