@@ -1,9 +1,10 @@
 import { config, RouterLinkStub } from '@vue/test-utils'
-import { Context as NuxtContext } from '@nuxt/types'
-
-const mockNuxtContext: Partial<NuxtContext> = {
-  redirect: jest.fn()
-}
+import {
+  mockNuxtColorMode,
+  mockNuxtContext,
+  mockNuxtHttp,
+  mockAccessor
+} from '~/tests/unit/mocks'
 
 config.stubs = {
   nuxt: true,
@@ -12,7 +13,15 @@ config.stubs = {
 }
 
 config.mocks = {
+  $accessor: mockAccessor,
+  $colorMode: mockNuxtColorMode,
   $nuxt: {
-    context: mockNuxtContext
+    context: {
+      ...mockNuxtContext,
+      $http: mockNuxtHttp,
+      app: {
+        $accessor: mockAccessor
+      }
+    }
   }
 }
