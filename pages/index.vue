@@ -51,7 +51,7 @@ export default defineComponent({
       app: { $accessor }
     } = useContext()
 
-    useAsync(() => $accessor.GET_USER())
+    useAsync(() => $accessor.GET_USER(), 'get-user')
 
     const { text } = useText($accessor)
 
