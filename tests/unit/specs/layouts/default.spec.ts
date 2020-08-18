@@ -10,7 +10,7 @@ describe('default layout', () => {
         <app-appear-disappear-stub></app-appear-disappear-stub>
         <app-links-stub items="[object Object],[object Object]"></app-links-stub>
         <div class="flex flex-wrap relative">
-          <nuxt class="w-full lg:w-4/5"></nuxt>
+          <nuxt-stub class="w-full lg:w-4/5"></nuxt-stub>
         </div>
         <app-switch-theme-stub></app-switch-theme-stub>
       </main>
