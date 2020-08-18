@@ -3,7 +3,10 @@
   "compilerOptions": {
     "types": [
       "node",
-      "jest"
+      "jest",
+      "@nuxt/types",
+      "@nuxt/typescript-build",
+      "@nuxt/http"
     ]
   }
 }
