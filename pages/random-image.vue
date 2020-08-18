@@ -29,7 +29,10 @@ function getRandomImageUrl() {
 export default defineComponent({
   setup() {
     const randomUrl = ref('')
-    randomUrl.value = getRandomImageUrl()
+    randomUrl.value =
+      process.env.NODE_ENV !== 'test'
+        ? getRandomImageUrl()
+        : 'https://source.unsplash.com/random/500x400'
     let intervalId: unknown
 
     onMounted(() => {
