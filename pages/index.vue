@@ -12,13 +12,13 @@
     </ol>
     <div class="flex">
       <button
-        class="mt-5 mr-5 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        class="btn__set mt-5 mr-5 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         @click="$accessor.GET_USER"
       >
         Set User Store
       </button>
       <button
-        class="mt-5 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        class="btn__reset mt-5 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
         @click="$accessor.RESET_USER"
       >
         Reset User Store
