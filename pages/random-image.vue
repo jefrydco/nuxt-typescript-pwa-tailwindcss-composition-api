@@ -5,7 +5,7 @@
       alt="Random Image"
       width="500"
       height="400"
-      class="rounded shadow-lg"
+      class="img__random rounded shadow-lg"
     />
   </div>
 </template>
