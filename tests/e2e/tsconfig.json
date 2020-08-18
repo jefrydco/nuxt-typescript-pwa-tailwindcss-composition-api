@@ -3,7 +3,10 @@
   "compilerOptions": {
     "types": [
       "node",
-      "cypress"
+      "cypress",
+      "@nuxt/types",
+      "@nuxt/typescript-build",
+      "@nuxt/http"
     ]
   }
 }
