@@ -1,7 +1,7 @@
 <template>
   <div>
     <validation-observer>
-      <validation-provider #default="{ errors }" name="Input" rules="required">
+      <validation-provider v-slot="{ errors }" name="Input" rules="required">
         <app-input v-model="text" :errors="errors" />
       </validation-provider>
     </validation-observer>
@@ -40,11 +40,6 @@ import AppHeader from '~/components/AppHeader.vue'
 import { useText, useMousePosition } from '~/compositions'
 
 export default defineComponent({
-  head() {
-    return {
-      title: 'Home'
-    }
-  },
   components: {
     ValidationObserver,
     ValidationProvider,
@@ -71,6 +66,11 @@ export default defineComponent({
       coordinateX,
       coordinateY,
       text
+    }
+  },
+  head() {
+    return {
+      title: 'Home'
     }
   }
 })

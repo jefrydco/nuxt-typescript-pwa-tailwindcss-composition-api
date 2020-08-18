@@ -16,14 +16,6 @@ import AppLinks, { AppLinkItem } from '~/components/AppLinks.vue'
 import AppSwitchTheme from '~/components/AppSwitchTheme.vue'
 
 export default defineComponent({
-  head() {
-    return {
-      bodyAttrs: {
-        class:
-          'antialiased text-gray-700 leading-normal bg-white dark:bg-gray-900 dark:text-gray-300'
-      }
-    }
-  },
   components: {
     AppAppearDisappear,
     AppLinks,
@@ -36,6 +28,14 @@ export default defineComponent({
     ])
     return {
       links
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class:
+          'antialiased text-gray-700 leading-normal bg-white dark:bg-gray-900 dark:text-gray-300'
+      }
     }
   }
 })

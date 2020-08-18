@@ -27,11 +27,6 @@ function getRandomImageUrl() {
 }
 
 export default defineComponent({
-  head() {
-    return {
-      title: 'Random Image'
-    }
-  },
   setup() {
     const randomUrl = ref('')
     randomUrl.value = getRandomImageUrl()
@@ -49,6 +44,11 @@ export default defineComponent({
 
     return {
       randomUrl
+    }
+  },
+  head() {
+    return {
+      title: 'Random Image'
     }
   }
 })
