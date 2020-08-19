@@ -27,4 +27,9 @@ describe('index page', () => {
       </div>
     `)
   })
+  it('has a query params', () => {
+    expect.assertions(1)
+    const wrapper = shallowMount(IndexPage)
+    expect(wrapper.vm.$route.query).toStrictEqual({ q: 'hello-world' })
+  })
 })
