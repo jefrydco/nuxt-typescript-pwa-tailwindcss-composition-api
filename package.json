@@ -26,7 +26,7 @@
     "coverage": "codecov"
   },
   "dependencies": {
-    "@nuxt/http": "^0.5.10",
+    "@nuxt/http": "^0.5.11",
     "@nuxt/typescript-runtime": "^1.0.0",
     "@nuxtjs/browserconfig": "^0.0.13",
     "@nuxtjs/composition-api": "^0.12.2",
@@ -40,7 +40,7 @@
     "vee-validate": "^3.3.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@nuxt/types": "^2.14.3",
     "@nuxt/typescript-build": "^2.0.2",
