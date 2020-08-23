@@ -33,7 +33,6 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.0.1",
     "@nuxtjs/sentry": "^4.3.4",
-    "@vue/composition-api": "^1.0.0-beta.11",
     "dotenv": "^8.2.0",
     "nuxt": "^2.14.3",
     "nuxt-typed-vuex": "^0.1.20",
