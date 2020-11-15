@@ -26,7 +26,8 @@
       "node",
       "@nuxt/types",
       "@nuxt/typescript-build",
-      "@nuxt/http"
+      "@nuxt/http",
+      "@nuxt/content"
     ]
   },
   "exclude": [
