@@ -39,7 +39,7 @@ export default defineComponent<AppInputProps>({
     const vm = getCurrentInstance()
 
     function onInput(event: InputEvent) {
-      vm?.$emit('input', (event.target as HTMLInputElement).value)
+      vm?.emit('input', (event.target as HTMLInputElement).value)
     }
 
     return {

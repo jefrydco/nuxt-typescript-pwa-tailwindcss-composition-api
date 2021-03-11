@@ -1,20 +1,17 @@
 module.exports = {
   plugins: ['vue', 'prettier'],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser'
-  },
   extends: [
-    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/strongly-recommended',
     '@nuxtjs/eslint-config-typescript',
-    'prettier',
-    'prettier/vue',
-    'prettier/@typescript-eslint'
+    'plugin:prettier/recommended'
   ],
   rules: {
     'no-console': 'off',
     'no-param-reassign': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'prettier/prettier': 'error'
-  }
+    'prettier/prettier': 'error',
+    'vue/no-v-for-template-key': 'off',
+    'vue/no-v-for-template-key-on-child': 'off',
+    'vue/no-v-html': 'off'
+  },
+  ignorePatterns: ['buildModules', 'libs']
 }

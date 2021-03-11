@@ -44,11 +44,14 @@ export default defineComponent({
     const quotes = ref('')
     const author = ref('')
     const { fetch } = useFetch(async () => {
-      const memeResponse = await $http.$get<ApiResponse>(
-        'https://programming-quotes-api.herokuapp.com/quotes/random'
+      const memeResponse = await $http.$get<ApiResponse[]>(
+        'https://rawcdn.githack.com/skolakoda/programming-quotes-api/47c27e62513322a5c26b92212c0fc5ed0d4180ab/backup/quotes.json'
       )
-      quotes.value = memeResponse.en
-      author.value = memeResponse.author
+
+      const meme = memeResponse[~~(Math.random() * memeResponse.length)]
+
+      quotes.value = meme.en
+      author.value = meme.author
     })
 
     const { timer, reset } = useTimer($accessor, fetch)

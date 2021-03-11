@@ -62,6 +62,12 @@ export default {
     // https://tailwindcss.nuxtjs.org/
     '@nuxtjs/tailwindcss',
 
+    // https://github.com/nuxt-community/stylelint-module
+    '@nuxtjs/stylelint-module',
+
+    // https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode'
   ],
@@ -75,9 +81,19 @@ export default {
     }
   },
 
+  // https://github.com/nuxt-community/eslint-module
+  eslint: {
+    fix: true
+  },
+
   // https://github.com/nuxt-community/stylelint-module
   stylelint: {
     fix: true
+  },
+
+  // https://tailwindcss.nuxtjs.org/
+  tailwindcss: {
+    viewer: false
   },
 
   // https://pwa.nuxtjs.org
@@ -144,19 +160,6 @@ export default {
         'postcss-nested': {}
       }
     },
-    transpile: [/typed-vuex/, 'vee-validate/dist/rules'],
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module?.rules.push({
-          enforce: 'pre',
-          test: /\.(ts|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /node_modules/,
-          options: {
-            fix: true
-          }
-        })
-      }
-    }
+    transpile: [/typed-vuex/, 'vee-validate/dist/rules']
   }
 } as Partial<NuxtOptions>
